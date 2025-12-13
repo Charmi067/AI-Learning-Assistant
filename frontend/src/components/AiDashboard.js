@@ -5,7 +5,7 @@ import axios from "axios";
 import { useEffect, useState } from "react"
 import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import { getFirestore, collection, addDoc, query, where, getDocs } from "firebase/firestore";
-import Sidebar from './sideBar';n
+import Sidebar from './sideBar';
 const auth = getAuth(app);
 const Storage = getStorage(app);
 const db = getFirestore(app);
