@@ -4,6 +4,8 @@ import axios from "axios";
 import { useState } from "react"
 import { getAuth } from 'firebase/auth';
 import './css/sideBar.css';
+import dotenv from dotenv;
+dotenv.config();
 const SideBar = ({displayChat}) => {
     const auth = getAuth(app);
     const userId = auth.currentUser.uid;
@@ -14,7 +16,7 @@ const SideBar = ({displayChat}) => {
             const userId = auth.currentUser.uid;
             const token = await auth.currentUser?.getIdToken();
             try {
-                const response = await axios.get(`http://127.0.0.1:3000/AiDashboard/${userId}`, {
+                const response = await axios.get(`${process.env.REACT_APP_API_URL}/AiDashboard/${userId}`, {
                     headers: {
                         Authorization: `Bearer ${token}`, // not Authentication
                     },
@@ -30,9 +32,8 @@ const SideBar = ({displayChat}) => {
     }, [auth]); // run when auth loads
     
     const ConvHandler = async (id) => {
-        console.log("ID,",id)
         const token =await auth.currentUser?.getIdToken();
-        const response = await axios.get(`http://127.0.0.1:3000/AiDashboard/${userId}/${id}`, {
+        const response = await axios.get(`${process.env.REACT_APP_API_URL}/${userId}/${id}`, {
             headers: {
                 "Authorization": `Bearer ${token}`
             }

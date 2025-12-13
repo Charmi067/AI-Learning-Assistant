@@ -6,6 +6,8 @@ import { useEffect, useState } from "react"
 import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import { getFirestore, collection, addDoc, query, where, getDocs } from "firebase/firestore";
 import Sidebar from './sideBar';
+import dotenv from dotenv;
+dotenv.config();
 const auth = getAuth(app);
 const Storage = getStorage(app);
 const db = getFirestore(app);
@@ -47,7 +49,7 @@ const AiDashboard = () => {
       
         const formData = new FormData();
         formData.append("file", file);
-        const response = await axios.post("http://127.0.0.1:3000/upload", formData, {
+        const response = await axios.post(`${process.env.REACT_APP_API_URL}/upload`, formData, {
           headers: {
             "Authorization": `Bearer ${token}`  // optional
           }
@@ -86,7 +88,7 @@ const AiDashboard = () => {
 
     console.log("conversationId", conversationId);
     const token = await auth.currentUser?.getIdToken();
-    const response = await axios.post('http://127.0.0.1:3000/AiDashboard/ask', {
+    const response = await axios.post(`${process.env.REACT_APP_API_URL}/ask`, {
       userId: auth.currentUser.uid,
       que: prompt,
       fileId: lastFileId,
