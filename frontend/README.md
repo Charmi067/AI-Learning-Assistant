@@ -1,6 +1,7 @@
 # AI-Powered Learning Assistant
 
-Live Demo: https://your-frontend-url.vercel.app
+Live Demo: https://your-frontend-url.vercel.app/signUp
+(Sign Up is required for a demo)
 
 ## Features
 - Document upload
@@ -19,3 +20,4 @@ AI: OpenAI / Gemini
 2. Add .env
 3. npm install
 4. npm run dev
+
