@@ -4,8 +4,6 @@ import axios from "axios";
 import { useState } from "react"
 import { getAuth } from 'firebase/auth';
 import './css/sideBar.css';
-import dotenv from dotenv;
-dotenv.config();
 const SideBar = ({displayChat}) => {
     const auth = getAuth(app);
     const userId = auth.currentUser.uid;
