@@ -2,6 +2,7 @@
   "dependencies": {
     "@cedrugs/pdf-parse": "^1.0.0",
     "@google/generative-ai": "^0.24.1",
+    "@qdrant/js-client-rest": "^1.16.2",
     "cors": "^2.8.5",
     "crypto": "^1.0.1",
     "dotenv": "^17.2.3",
