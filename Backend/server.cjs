@@ -23,7 +23,10 @@ const uploadRoute = require("./routes/upload.cjs");                // your conve
 app.use("/upload",verifyToken, uploadRoute);
 app.use("/",verifyToken,askRoute)
 app.use("/",conversation);
-app.use("/",conversations)
+app.use("/",conversations);
+app.get("/", (req, res) => {
+    res.send("AI Learning Assistant Backend is Live 🚀");
+  });
 // Start Server
 const Port = process.env.PORT || 3000;
 app.listen(Port, () => console.log(`🔥 Server running on ${Port}`));
