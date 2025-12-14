@@ -86,7 +86,7 @@ const AiDashboard = () => {
 
     console.log("conversationId", conversationId);
     const token = await auth.currentUser?.getIdToken();
-    const response = await axios.post(`${process.env.REACT_APP_API_URL}/ask`, {
+    const response = await axios.post(`${process.env.REACT_APP_API_URL}/AiDashboard/ask`, {
       userId: auth.currentUser.uid,
       que: prompt,
       fileId: lastFileId,
