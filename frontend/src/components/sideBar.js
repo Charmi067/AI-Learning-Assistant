@@ -14,7 +14,8 @@ const SideBar = ({displayChat}) => {
             const userId = auth.currentUser.uid;
             const token = await auth.currentUser?.getIdToken();
             try {
-                const response = await axios.get(`${process.env.REACT_APP_API_URL}/AiDashboard/${userId}`, {
+                console.log("userId",userId)
+                const response = await axios.get(`${process.env.REACT_APP_API_URL}/${userId}`, {
                     headers: {
                         Authorization: `Bearer ${token}`, // not Authentication
                     },
@@ -38,6 +39,7 @@ const SideBar = ({displayChat}) => {
                 }
             })  
             displayChat(response.data.conversationMessages);
+            console.log(conversations);
         }catch(err){
             console.log("error in fetching conversation messages...");
         }
@@ -47,13 +49,12 @@ const SideBar = ({displayChat}) => {
         <div className="sidebar">
 
             <h3>Your Chats</h3>
-
             {conversations.length === 0 ? (
                 <p>No conversations yet</p>
             ) : (
                 <ul>
                     {conversations.map(conv => (
-                        <li className="chat-title" key={conv.conversationId} onClick={() => ConvHandler(conv.conversationId)}>
+                        <li className="chat-title" onClick={() => ConvHandler(conv.conversationId)}>
                             {conv.title}
                         </li>
                     ))}
