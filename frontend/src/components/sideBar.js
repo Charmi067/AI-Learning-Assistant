@@ -15,7 +15,7 @@ const SideBar = ({displayChat}) => {
             const token = await auth.currentUser?.getIdToken();
             try {
                 console.log("userId",userId)
-                const response = await axios.get(`${process.env.REACT_APP_API_URL}/${userId}`, {
+                const response = await axios.get(`${process.env.REACT_APP_API_URL}/AiDashboard/${userId}`, {
                     headers: {
                         Authorization: `Bearer ${token}`, // not Authentication
                     },
