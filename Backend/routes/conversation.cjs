@@ -1,7 +1,7 @@
 const express = require("express")
 const router = express.Router();
 const {db} = require("../firebaseAdmin.cjs");
-router.get("/:userId/:conversationId", async (req, res) => {
+router.get("/AiDashboard/:userId/:conversationId", async (req, res) => {
     try {
         console.log(req.params)
         const { userId, conversationId } = req.params;

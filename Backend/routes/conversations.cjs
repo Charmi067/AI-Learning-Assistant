@@ -5,7 +5,7 @@ const { db } = require("../firebaseAdmin.cjs")
 
 router.get('/AiDashboard/:user', async (req, res) => {
     try {
-        console.log("params",req.params);
+        //console.log("params",req.params);
         const userId = req.params.user;
         const convSnap = await db
             .collection("users")
@@ -17,7 +17,7 @@ router.get('/AiDashboard/:user', async (req, res) => {
             conversationId: doc.id,
             ...doc.data()
         }))
-        console.log(convSnap.docs);
+        //console.log(convSnap.docs);
 
         res.json({ success: true, conversations });
     } catch (err) {

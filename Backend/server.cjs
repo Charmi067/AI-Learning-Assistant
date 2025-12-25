@@ -10,16 +10,18 @@ const conversation =require("./routes/conversation.cjs")
 const conversations=require("./routes/conversations.cjs")
 // Static frontend
 
-app.use(express.static(path.join(__dirname, "frontend")));
 
 app.use(cors({
-    origin: [
-      "http://localhost:3000",
-      "https://ai-learning-assistant-rust.vercel.app"
-    ],
-    methods: ["GET", "POST", "PUT", "DELETE"],
-    credentials: true
-  }));
+  origin: [
+    "http://127.0.0.1:3001",
+    "http://localhost:3000",
+    "https://ai-learning-assistant-rust.vercel.app",
+  ],
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true
+}));
+
+app.use(express.static(path.join(__dirname, "frontend")));
 app.use(express.json());
 
 //public routes
