@@ -31,13 +31,17 @@ const SideBar = ({displayChat}) => {
     
     const ConvHandler = async (id) => {
         const token =await auth.currentUser?.getIdToken();
-        const response = await axios.get(`${process.env.REACT_APP_API_URL}/${userId}/${id}`, {
-            headers: {
-                "Authorization": `Bearer ${token}`
-            }
-        })   
-
-        displayChat(response.data.conversationMessages);
+        try{
+            const response = await axios.get(`${process.env.REACT_APP_API_URL}/${userId}/${id}`, {
+                headers: {
+                    "Authorization": `Bearer ${token}`
+                }
+            })  
+            displayChat(response.data.conversationMessages);
+        }catch(err){
+            console.log("error in fetching conversation messages...");
+        }
+         
     }
     return (
         <div className="sidebar">
@@ -49,7 +53,7 @@ const SideBar = ({displayChat}) => {
             ) : (
                 <ul>
                     {conversations.map(conv => (
-                        <li className="chat-title" onClick={() => ConvHandler(conv.conversationId)}>
+                        <li className="chat-title" key={conv.conversationId} onClick={() => ConvHandler(conv.conversationId)}>
                             {conv.title}
                         </li>
                     ))}
