@@ -33,7 +33,7 @@ const SideBar = ({displayChat}) => {
     const ConvHandler = async (id) => {
         const token =await auth.currentUser?.getIdToken();
         try{
-            const response = await axios.get(`${process.env.REACT_APP_API_URL}/${userId}/${id}`, {
+            const response = await axios.get(`${process.env.REACT_APP_API_URL}/AiDashboard/${userId}/${id}`, {
                 headers: {
                     "Authorization": `Bearer ${token}`
                 }
