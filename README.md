@@ -10,10 +10,11 @@ Live Demo: https://your-frontend-url.vercel.app/signUp
 - Vector search
 
 ## Tech Stack
-Frontend: React, Tailwind  
+Frontend: React
 Backend: Node.js, Express  
 Vector DB: Qdrant  
-AI: OpenAI / Gemini
+database:supabse
+AI:  Gemini
 
 ## Setup
 1. Clone repo
