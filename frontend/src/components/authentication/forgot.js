@@ -1,42 +1,30 @@
-import React from 'react'
-import { useNavigate } from 'react-router-dom';
-import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
-import { app } from "../../firebase/firebaseConfig"
-import '../css/login.css'
+// src/components/authentication/forgot.js
+// ─────────────────────────────────────────────────────────────
+// Simplified forgot page — just shows the Reset Password option.
+// Google login and Phone login are removed (backend doesn't support them).
+// ─────────────────────────────────────────────────────────────
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import "../css/login.css";
+
 const Forgot = () => {
-    const navigate=useNavigate();
-    const auth = getAuth(app);
-    const GoogleHander=async ()=>{
-                try {
-                    const provider = new GoogleAuthProvider();
-                    provider.setCustomParameters({ prompt: "select_account" });
-                    const googleUser = await signInWithPopup(auth, provider);
-                    console.log(googleUser);
-                    navigate('/AiDashboard');
-                } catch (err) {
-                    console.log(err);
-                
-            }
-    }
+  const navigate = useNavigate();
 
-    const PhoneHandler=()=>{
-        navigate('/login-with-phone');
-    }
-    const resetPassword=()=>{
-        navigate('/reset-password');
-    }
-    
   return (
-    
-    <div className='loginContainer'>
-      <div className='loginBox'>
-         <button  id="GoogleButton" type="button" onClick={GoogleHander}>Login with Google</button>
-         <button  id="GoogleButton" type="button" onClick={PhoneHandler}>Login with Phone Number</button>
-         <button  id="GoogleButton" type="button" onClick={resetPassword}>Reset Password</button>
-         
-         </div>
+    <div className="loginContainer">
+      <div className="loginBox">
+        <h1>Account Recovery</h1>
+        <p style={{ marginBottom: "20px", color: "#555" }}>
+          Choose an option below to recover your account.
+        </p>
+        <button id="GoogleButton" type="button" onClick={() => navigate("/reset-password")}>
+          📧 Reset Password via Email
+        </button>
+        <br /><br />
+        <a href="/login" style={{ fontSize: "14px" }}>← Back to Login</a>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Forgot
+export default Forgot;
