@@ -18,11 +18,5 @@ yarn-error.log*
 # OS
 .DS_Store
 
-# Firebase
-firebase-debug.log
-
 # uploads / temp
 uploads/
-
-# Firebase Admin
-Backend/serviceAccountKey.json
