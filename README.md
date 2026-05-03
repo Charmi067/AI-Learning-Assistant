@@ -1,4 +1,9 @@
 # AI-Powered Learning Assistant
+## 📸 Preview
+
+<p align="center">
+  <img src="/AI_Dashboard.png" alt="AI Dashboard" width="800" />
+</p>
 
 Live Demo: https://your-frontend-url.vercel.app/signUp
 (Sign Up is required for a demo)
