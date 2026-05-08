@@ -3,8 +3,8 @@
 
 <p align="center">
   <img src="/AI_Dashboard.png" alt="AI Dashboard" width="800" />
-  <img src="/Sign_up.png" alt="Sign_up paage" width="800>
-  <img src="/Login.png" alt="Sign_up paage" width="800><img src="/Sign_up.png" alt="Sign_up paage" width="800>
+  <img src="/Sign_up.png" alt="Sign_up page" width="800" />
+  <img src="/Login.png" alt="login page" width="800" />
 </p>
 
 Live Demo: https://your-frontend-url.vercel.app/signUp
@@ -27,4 +27,4 @@ AI:  Gemini
 1. Clone repo
 2. Add .env
 3. npm install
-4. npm run dev
+4. npm start
