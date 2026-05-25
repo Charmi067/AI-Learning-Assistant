@@ -24,9 +24,8 @@ const app = express();
 app.use(
   cors({
     origin: [
-      "http://127.0.0.1:3001",
       "http://localhost:3000",
-      "http://localhost:3001",
+      process.env.FRONTEND_URL,
       "https://ai-learning-assistant-rust.vercel.app",
     ],
     methods: ["GET", "POST", "PUT", "DELETE"],
