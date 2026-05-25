@@ -33,7 +33,9 @@ jobs:
 
       - name: Build and push frontend
         run: |
-          docker build -t ai-rag-app:frontend ./frontend
+          docker build \
+            --build-arg REACT_APP_API_URL=${{ secrets.REACT_APP_API_URL }} \
+            -t ai-rag-app:frontend ./frontend
           docker tag ai-rag-app:frontend 688525135605.dkr.ecr.ap-south-1.amazonaws.com/ai-rag-app:frontend
           docker push 688525135605.dkr.ecr.ap-south-1.amazonaws.com/ai-rag-app:frontend
 
