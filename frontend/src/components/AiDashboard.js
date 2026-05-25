@@ -136,7 +136,7 @@ const AiDashboard = () => {
         <header className="dashboard-header">
           <div className="header-brand">
             <span className="brand-dot" />
-            <span className="brand-name">AI Dashboard</span>
+            <span className="brand-name">AI chatbot</span>
             {lastFileId && (
               <span className="rag-badge">RAG</span>
             )}
