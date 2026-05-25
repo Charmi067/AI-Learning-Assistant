@@ -14,6 +14,7 @@ export const Login = () => {
 
   const LoginHandler = async (e) => {
     e.preventDefault();
+    console.log("API URL:", process.env.REACT_APP_API_URL); // add this line to debug
     setError("");
     setLoading(true);
     try {
