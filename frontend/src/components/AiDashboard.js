@@ -143,7 +143,7 @@ const AiDashboard = () => {
           </div>
           <div className="header-actions">
             <button className="btn-new-chat" onClick={startNewChat}>
-              + New Chats
+              + New Chat
             </button>
             <div className="user-chip">
               <span className="user-avatar">{initials}</span>
