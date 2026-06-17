@@ -23,7 +23,11 @@
 - 🚀 **Automated CI/CD** — GitHub Actions → Docker → AWS ECR → EC2 (zero manual deployment)
 
 ---
+## 📹 CI/CD Pipeline Demo
 
+[![CI/CD Pipeline Live Demo](https://img.youtube.com/vi/IGNUVVjhbQ8/maxresdefault.jpg)](https://youtu.be/IGNUVVjhbQ8)
+
+▶️ Watch: [GitHub Actions → Docker → ECR → EC2 Live Deployment](https://youtu.be/IGNUVVjhbQ8)
 ## 🏗️ Architecture
 
 ```
