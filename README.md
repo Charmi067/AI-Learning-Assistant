@@ -12,9 +12,6 @@
   <img src="/Login.png" alt="Login Page" width="800" />
 </p>
 
-🔗 **Live Demo:** [https://your-frontend-url.vercel.app/signUp](https://your-frontend-url.vercel.app/signUp)
-*(Sign Up required to access the demo)*
-
 ---
 
 ## ✨ Features
