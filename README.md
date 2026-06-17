@@ -204,8 +204,8 @@ AI-Learning-Assistant/
 
 ## 👩‍💻 Author
 
-**Charmi [Last Name]**
+**Charmi Prajapati**
 B.Sc. (CA&IT) Honours — Ganpat University, Gujarat
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?logo=linkedin)](https://linkedin.com/in/your-profile)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?logo=linkedin)](https://www.linkedin.com/in/charmi-prajapati-620011346/)
 [![GitHub](https://img.shields.io/badge/GitHub-Follow-black?logo=github)](https://github.com/Charmi067)
